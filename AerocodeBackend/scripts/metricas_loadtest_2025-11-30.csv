@@ -1,0 +1,10 @@
+Cenario,Endpoint,Processamento(ms),Latencia(ms),Resposta(ms)
+"1 Usuário(s)","http://localhost:3000/api/v1/aeronaves",4.666,4.734,9.400
+"5 Usuário(s)","http://localhost:3000/api/v1/aeronaves",9.920,8.360,18.280
+"10 Usuário(s)","http://localhost:3000/api/v1/aeronaves",19.851,14.209,34.060
+"1 Usuário(s)","http://localhost:3000/api/v1/colaboradores",4.459,2.341,6.800
+"5 Usuário(s)","http://localhost:3000/api/v1/colaboradores",10.238,8.602,18.840
+"10 Usuário(s)","http://localhost:3000/api/v1/colaboradores",16.781,12.459,29.240
+"1 Usuário(s)","http://localhost:3000/api/v1/componentes",3.017,1.983,5.000
+"5 Usuário(s)","http://localhost:3000/api/v1/componentes",9.718,7.402,17.120
+"10 Usuário(s)","http://localhost:3000/api/v1/componentes",17.984,11.936,29.920

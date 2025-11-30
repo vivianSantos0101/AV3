@@ -1,0 +1,17 @@
+
+.main-layout-container {
+
+    display: flex;
+    flex-direction: row; 
+    height: 100vh;
+    width: 100%; 
+    background-color: #1d012e;
+}
+
+.content-area-full {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding: 24px;
+    box-sizing: border-box;
+    color: #e2e8f0; 
+}

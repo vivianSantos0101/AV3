@@ -1,0 +1,30 @@
+.tabs-header {
+    display: flex;
+    border-bottom: 2px solid #334155; /* Borda escura */
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 12px 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent; 
+    color: #cbd5e1; 
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    margin-right: 1px;
+}
+
+.tab-button:hover:not(.active) {
+    color: #f1f5f9;
+}
+
+.tab-button.active {
+    
+    color: #a78bfa; 
+    border-bottom-color: #a78bfa;
+    font-weight: 600;
+}
+

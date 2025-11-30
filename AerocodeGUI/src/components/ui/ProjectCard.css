@@ -1,0 +1,83 @@
+
+.project-card {
+    
+    background-color: #1e293b; 
+    border-radius: 8px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+    transition: box-shadow 0.2s;
+    
+    width: 100%; 
+}
+
+.project-card:hover {
+    box-shadow: 0 0 0 1px #4f46e5; 
+}
+
+.card-header {
+    background-color: #334155; 
+    padding: 8px 16px;
+    border-bottom: 1px solid #475569;
+}
+
+.card-codigo {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #cbd5e1; /* Texto (Código) claro */
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-modelo {
+    font-size: 1.4rem;
+    color: #f1f5f9; /* Título (Modelo) claro */
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.card-tipo {
+    font-size: 0.9rem;
+    color: #cbd5e1; /* Tipo (Comercial) claro */
+    margin: 0;
+}
+
+.card-status {
+    padding: 0 16px 16px 16px;
+    flex-grow: 1; 
+    font-size: 0.9rem;
+    color: #f1f5f9; /* Texto do status (claro) */
+}
+.card-status strong {
+    color: #cbd5e1;
+}
+.card-status p {
+    color: #eab308; /* Amarelo/Laranja Forte (Em Andamento) */
+    font-weight: bold;
+    margin: 4px 0 0 0;
+}
+
+.card-footer {
+    background-color: #334155; /* Fundo do footer escuro */
+    padding: 12px 16px;
+    border-top: 1px solid #475569;
+}
+
+.card-button {
+    background-color: #4f46e5; /* Roxo */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.card-button:hover {
+    background-color: #4338ca;
+}

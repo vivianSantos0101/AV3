@@ -1,0 +1,82 @@
+
+.manager-tab-content {
+    padding: 20px 0;
+}
+
+.manager-actions {
+    margin-bottom: 20px;
+}
+
+.manager-list {
+    margin-top: 20px;
+}
+
+.manager-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e293b; 
+    box-shadow: none; 
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.manager-data-table th,
+.manager-data-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #334155; 
+    color: #f1f5f9; 
+}
+
+.manager-data-table thead tr {
+    background-color: #334155; 
+}
+
+.manager-data-table th {
+    font-size: 0.8rem;
+    color: #cbd5e1; 
+    text-transform: uppercase;
+}
+
+.manager-data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.manager-data-table tbody tr:hover {
+    
+    background-color: #6d28d9; 
+}
+
+
+
+
+.btn-small {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+}
+
+
+.empty-state-message {
+    padding: 20px;
+    background-color: #1e293b; 
+    border-radius: 6px;
+    border: 1px dashed #475569; 
+    color: #cbd5e1;
+    text-align: center;
+    font-style: italic;
+    box-shadow: none;
+}
+
+
+.status-aprovado, .status-concluída, .status-pronta {
+    color: #22c55e; /* VERDE VIBRANTE */
+    font-weight: bold;
+}
+.status-reprovado, .status-em-produção, .status-pendente {
+    color: #ef4444; /* VERMELHO VIBRANTE */
+    font-weight: bold;
+}
+.status-em-transporte, .status-em-andamento {
+    color: #eab308; /* AMARELO/LARANJA FORTE */
+    font-weight: bold;
+}

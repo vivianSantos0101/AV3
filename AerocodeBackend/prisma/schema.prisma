@@ -1,0 +1,109 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+enum NivelAcesso {
+  ADMINISTRADOR
+  ENGENHEIRO
+  OPERADOR
+}
+
+enum TipoComponente {
+  NACIONAL
+  IMPORTADA
+}
+
+enum StatusComponente {
+  EM_PRODUCAO
+  EM_TRANSPORTE
+  PRONTA
+}
+
+enum StatusFase {
+  PENDENTE
+  ANDAMENTO
+  CONCLUIDA
+}
+
+enum TipoTeste {
+  ELETRICO
+  HIDRAULICO
+  AERODINAMICO
+}
+
+enum ResultadoTeste {
+  APROVADO
+  REPROVADO
+}
+
+enum TipoAeronave {
+  COMERCIAL
+  MILITAR
+}
+
+model Colaborador {
+  id          Int            @id @default(autoincrement())
+  nome        String         @default("")
+  telefone    String         @default("")
+  endereco    String         @default("")
+  usuario     String         @unique
+  senha       String
+  nivelAcesso NivelAcesso
+  fases       FaseProducao[] @relation("FaseColaboradores")
+}
+
+model Componente {
+  id         Int              @id @default(autoincrement())
+  nome       String
+  tipo       TipoComponente
+  fornecedor String
+  status     StatusComponente @default(EM_PRODUCAO)
+  projetoId  Int
+  projeto    ProjetoAeronave  @relation(fields: [projetoId], references: [id])
+}
+
+model FaseProducao {
+  id     Int        @id @default(autoincrement())
+  nome   String
+  prazo  String
+  ordem  Int
+  status StatusFase @default(PENDENTE)
+
+  projetoId Int
+  projeto   ProjetoAeronave @relation(fields: [projetoId], references: [id])
+
+  colaboradores Colaborador[] @relation("FaseColaboradores")
+}
+
+model Teste {
+  id        Int            @id @default(autoincrement())
+  tipo      TipoTeste
+  resultado ResultadoTeste
+
+  projetoId Int
+  projeto   ProjetoAeronave @relation(fields: [projetoId], references: [id])
+}
+
+model ProjetoAeronave {
+  id         Int          @id @default(autoincrement())
+  codigo     String       @unique
+  modelo     String
+  tipo       TipoAeronave
+  capacidade Float
+  alcance    Float
+
+  componentes Componente[]
+  fases       FaseProducao[]
+  testes      Teste[]
+}
