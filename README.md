@@ -21,3 +21,9 @@ Para resetar a db:
 
 Para gerar os graficos e testar os endpoints: 
 - npm run loadtest (TEM QUE ESTAR RODANDO O BACKEND)
+
+Contas para logar:
+
+- usuario: admin / senha: admin123 (administrador)
+- usuario: Gerson / senha: paysandurebaixado (operador)
+- usuario: maria / senha: senha123 (engenheiro)
